@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% block title %}My courses{% endblock %}
 {% block content %}
     <h1>My courses</h1>
@@ -9,6 +10,7 @@
                 <p>
                     <a href="{% url "course_edit" course.id %}">Edit</a>
                     <a href="{% url "course_delete" course.id %}">Delete</a>
+                    <a href="{% url "course_module_update" course.id %}">Edit modules</a>
                 </p>
             </div>
         {% empty %}
